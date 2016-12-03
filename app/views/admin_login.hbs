@@ -1,0 +1,32 @@
+{{> welcomemenu _id="admin_login" }}
+
+<section class="ui raised segment">
+    <div class="ui grid">
+        <aside class="ui six wide column">
+            <img src="images/tweet.jpg" class="ui medium image">
+        </aside>
+        <div class="ui ten wide column fluid form">
+            <div class="ui stacked segment">
+                <div class="ui info message">
+                    Login with your administrator credentials
+                </div>
+                <form action="/admin_authenticate" method="POST">
+                    <div class="field">
+                        <label>Username</label> <input placeholder="Email" type="text"
+                                                       name="email">
+                    </div>
+                    <div class="field">
+                        <label>Password</label> <input type="password" name="password">
+                    </div>
+                    <button class="ui blue submit button"><i class="sign in icon"></i>Admin login </button>
+                </form>
+                {{> formerror }}
+                <div class="ui info message">
+                    <i class="icon help"></i>
+                    Don't have an administrator login? Create an account <a href="admins/admin_signup"><em>here</em></a> with your admin key.
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

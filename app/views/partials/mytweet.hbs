@@ -1,0 +1,21 @@
+<section class="ui raised segment">
+    <div class="ui two column grid ">
+        <div class="ui form ten wide column">
+            <form action="/posttweet" method="POST">
+                <div class="field">
+                    <textarea rows="1" maxlength="20" placeholder="Subject" name="subject"></textarea>
+                </div>
+                <div class="field">
+                    <textarea maxlength="140" name="text" id="text" placeholder="What's on your mind?"></textarea>
+                </div>
+                <button class="ui blue submit button"><i class="twitter icon"></i>Tweet</button>
+            </form>
+            {{> formerror }}
+        </div>
+        <div class="six wide column">
+            <aside class="six wide column">
+                <img src="images/tweet1.jpg" class="ui medium image">
+            </aside>
+        </div>
+    </div>
+</section>

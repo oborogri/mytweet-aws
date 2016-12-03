@@ -1,0 +1,56 @@
+<section class="ui raised segment">
+    <div class="ui grid">
+        <asside class="six wide column">
+            <img src="images/users.jpg" class="ui medium image">
+        </asside>
+        <article class="ten wide column">
+            <h4>MyTweet Users: {{users.length}}</h4>
+        <form class="ui form" action="/deleteUser" method="POST">
+            <table class="ui selectable striped table segment">
+                <thead>
+                <tr>
+                    <th>Select </th>
+                    <th>Name   </th>
+                    <th>Surname</th>
+                    <th>Email  </th>
+                    <th>Joined </th>
+                    <th>Posts  </th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each users}}
+                    <tr>
+                        <td>
+                            <div class="ui checkbox">
+                                <input type="checkbox" id="usercheckbox" name="user" value="{{_id}}">
+                                <label></label>
+                            </div>
+                        </td>
+                        <td> {{firstName}} </td>
+                        <td> {{lastName}}  </td>
+                        <td><button class="ui small button" name="userEmail" formaction="/user_profile" value="{{email}}"
+                                    name="user">{{email}}</button></td>
+                        <td> {{joined}}   </td>
+                        <td> {{posts}}    </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+                <tfoot class="full-width">
+                <tr>
+                    <th colspan="4">
+                        <div class="ui buttons">
+                            <button class="ui positive button" id="delete_user">Delete selected
+                            </button>
+                            <div class="or"></div>
+                            <button class="ui negative button" id="delete_all" formaction="/deleteUsersAll">
+                                <i class="remove circle icon"></i>Delete all
+                            </button>
+                        </div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+        </form>
+        </article>
+    </div>
+</section>

@@ -1,0 +1,82 @@
+{
+  "users": {
+    "_model": "User",
+
+    "homer": {
+      "firstName": "Homer",
+      "lastName": "Simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "joined": "Wed, Nov 2nd, 2016",
+      "posts": 4
+    },
+
+    "marge": {
+      "firstName": "Marge",
+      "lastName": "Simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "joined": "Wed, Nov 2nd, 2016",
+      "posts": 2
+    },
+
+    "bart": {
+      "firstName": "Bart",
+      "lastName": "Simpson",
+      "email": "bart@simpson.com",
+      "password": "secret",
+      "joined": "Thu, Nov 3rd, 2016",
+      "posts": 1
+    },
+
+    "lisa": {
+      "firstName": "Lisa",
+      "lastName": "Simpson",
+      "email": "lisa@simpson.com",
+      "password": "secret",
+      "joined": "Thu, Nov 3rd, 2016",
+      "posts": 1
+    }
+  },
+
+  "admins": {
+    "_model": "Admin",
+    "admin": {
+      "firstName": "Greg",
+      "lastName": "Oboroceanu",
+      "email": "admin@wit.ie",
+      "password": "adminkey"
+    }
+  },
+
+  "tweets": {
+    "_model": "Tweet",
+    "one": {
+      "text": "What are you up to?",
+      "subject": "ping",
+      "date": "Wed, Nov 2nd, 2016, 9:45:03 PM",
+      "sender": "->users.homer"
+    },
+
+    "two": {
+      "text": "I'm just back from work?",
+      "subject": "pong",
+      "date": "Wed, Nov 2nd, 2016, 9:49:07 PM",
+      "sender": "->users.marge"
+    },
+
+    "three": {
+      "text": "Up the Rebels!",
+      "subject": "#rebels",
+      "date": "Thu, Nov 3rd, 2016, 5:45:05 PM",
+      "sender": "->users.bart"
+    },
+
+    "four": {
+      "text": "Got my tickets!!",
+      "subject": "cold play",
+      "date": "Thu, Nov 3rd, 2016, 6:15:10 PM",
+      "sender": "->users.lisa"
+    }
+  }
+}

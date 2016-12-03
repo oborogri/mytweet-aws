@@ -1,0 +1,14 @@
+<nav class="ui inverted blue menu">
+    <header class="header item"><a href="/"> MyTweet </a></header>
+    <div class="right menu">
+        <a id="home"   class= "item" href="/home">Home</a>
+        <a id="newtweet" class= "item" href="/newtweet">New tweet</a>
+        <a id="settings" class= "item" href="/settings"> Settings</a>
+        <a id="timeline" class= "item" href="/timeline">MyTweet Timeline</a>
+        <a id="logout" class= "item" href="/logout"> Logout</a>
+    </div>
+</nav>
+
+<script>
+    $("#{{_id}}").addClass("active item");
+</script>

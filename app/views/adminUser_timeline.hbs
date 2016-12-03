@@ -1,0 +1,15 @@
+{{> adminmenu _id='userslist'}}
+
+<section class="ui raised segment">
+
+    {{> timeline }}
+    <script>
+        document.getElementById("delete_tweet").setAttribute('disabled', 'disabled');
+        document.getElementById("delete_all").setAttribute('disabled', 'disabled');
+        document.getElementById("senderEmail").setAttribute('disabled', 'disabled');
+        document.getElementById("checkbox").setAttribute('disabled', 'disabled');
+
+    </script>
+    <div class="ui  divider"></div>
+
+</section>

@@ -1,0 +1,23 @@
+<section class="ui raised segment">
+    <div class="ui grid">
+        <form class="ui form" action="/adminUser_timeline" method="POST">
+        <div class="ui card">
+            <div class="image">
+                <img src="/images/{{user.firstName}}.jpg">
+            </div>
+            <div class="content">
+                <button class="ui button" name="user" value="{{user.email}}">{{user.firstName}}</button>
+                <div class="meta">
+                    <span class="date">Joined: {{user.joined}}</span>
+                </div>
+            </div>
+            <div class="extra content">
+                <a>
+                    <i class="twitter icon"></i>
+                    {{user.posts}} Posts
+                </a>
+            </div>
+        </div>
+        </form>
+    </div>
+</section>

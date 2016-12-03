@@ -1,0 +1,54 @@
+<section class="ui raised segment">
+    <div class="ui grid">
+        <asside class="six wide column">
+            <img src="images/timeline.jpg" class="ui medium image">
+        </asside>
+        <article class="ten wide column">
+            <h4>Tweets: {{tweets.length}}</h4>
+        <form class="ui form" action="/deleteTweet" method="POST">
+            <table class="ui selectable striped table segment">
+                <thead>
+                <tr>
+                    <th>Select </th>
+                    <th>Subject</th>
+                    <th>From   </th>
+                    <th>Sent   </th>
+                    <th>Message</th>
+                </tr>
+                </thead>
+                 <tbody>
+                {{#each tweets}}
+                    <tr>
+                        <td>
+                            <div class="ui checkbox">
+                                <input type="checkbox" id="checkbox" name="tweet" value="{{_id}}">
+                                <label></label>
+                            </div>
+                        </td>
+                         <td> {{subject}}       </td>
+                         <td><button class="ui small button" id="senderEmail" formaction="/user_timeline" value="{{sender.email}}"
+                                     name="sender">{{sender.email}}</button></td>
+                         <td> {{date}}          </td>
+                         <td> {{text}}          </td>
+                     </tr>
+                 {{/each}}
+                </tbody>
+                <tfoot class="full-width">
+                <tr>
+                    <th colspan="4">
+                        <div class="ui buttons">
+                            <button class="ui positive button" id="delete_tweet">Delete selected
+                            </button>
+                            <div class="or"></div>
+                            <button class="ui negative button" id="delete_all" formaction="/deleteTweetsAll">
+                                <i class="remove circle icon"></i>Delete all
+                            </button>
+                        </div>
+                    </th>
+                </tr>
+                </tfoot>
+            </table>
+            </form>
+        </article>
+    </div>
+</section>

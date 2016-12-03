@@ -1,0 +1,14 @@
+{{> mainmenu _id='timeline'}}
+
+<section class="ui raised segment">
+
+    {{> timeline }}
+
+    <script>
+        document.getElementById("delete_all").setAttribute('disabled', 'disabled');
+        document.getElementById("delete_tweet").setAttribute('disabled', 'disabled');
+    </script>
+
+    <div class="ui  divider"></div>
+
+</section>
